@@ -1,0 +1,49 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: pink; /* Fondo rosado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sobre {
+    width: 300px;
+    height: 150px;
+    background: #fbc8d4; /* Color del sobre */
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+    transform-origin: bottom;
+    cursor: pointer;
+}
+
+.sobre.abierto .carta {
+    opacity: 1;
+    transform: translateY(-150%);
+}
+
+.carta {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease 0.5s; /* Delays para sincronizar la apertura */
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #ff1493; /* Color rosa profundo para el título */
+}
+
+p {
+    color: #333; /* Color de texto oscuro para mejor lectura */
+    font-size: 16px; /* Ajuste de tamaño para mejorar la legibilidad en dispositivos móviles */
+}
